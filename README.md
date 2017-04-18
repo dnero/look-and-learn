@@ -1,6 +1,6 @@
-# Quasar App
+# Look and learn
 
-> A Quasar project
+> An augmented reality app for kids to help them discover numbers and letters around them.
 
 ## Build Setup
 

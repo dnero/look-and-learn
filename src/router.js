@@ -23,6 +23,6 @@ export default new VueRouter({
   routes: [
     { path: '/', component: load('Index') }, // Default
     { path: '*', component: load('Error404') }, // Not found
-    { path: '/alphabet', component: load('Alphabet') }
+    { path: 'alphabet', component: load('Alphabet') }
   ]
-})
+});

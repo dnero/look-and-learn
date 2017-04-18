@@ -1,7 +1,7 @@
 <template>
   <div>
   	<div>
-	  Welcome to Learn With Me
+	  Welcome to the Look &amp; Learn App
 	</div>
   </div>
 </template>

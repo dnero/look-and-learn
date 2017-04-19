@@ -8,6 +8,20 @@ function load (component) {
 }
 
 export default new VueRouter({
+
+routes: [
+    {
+        path: '/', component: load('Index'),
+        children: [
+            { path: '/letters', component: load('Letters') },
+            { path: '/numbers', component: load('Numbers') }
+        ]
+    }, // Default
+    { path: '*', component: load('Error404') }, // Not found
+]
+
+});
+
 /*
 * NOTE! VueRouter "history" mode DOESN'T works for Cordova builds,
 * it is only to be used only for websites.
@@ -19,15 +33,3 @@ export default new VueRouter({
 * If switching back to default "hash" mode, don't forget to set the
 * build publicPath back to '' so Cordova builds work again.
 */
-
-routes: [
-    {
-        path: '/', component: load('Index'),
-        children: [
-            { path: '/alphabet', component: load('Alphabet') }
-        ]
-    }, // Default
-    { path: '*', component: load('Error404') }, // Not found
-]
-
-});

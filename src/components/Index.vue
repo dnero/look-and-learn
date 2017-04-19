@@ -15,8 +15,8 @@
 
 <!-- Navigation Tabs -->
 <q-tabs slot="navigation">
-    <q-tab icon="mail" route="/Alphabet" exact replace>Letters</q-tab>
-    <q-tab icon="alarm" route="/layout/alarm" exact replace>Numbers</q-tab>
+    <q-tab icon="font_download" route="/letters" exact replace>Letters</q-tab>
+    <q-tab icon="filter_1" route="/numbers" exact replace>Numbers</q-tab>
 </q-tabs>
 
 <!-- <div class="layout-view" slot="main"></div> -->
@@ -30,8 +30,11 @@
 		</q-toolbar-title>
 	</div>
     <div class="list no-border platform-delimiter">
-    	<q-drawer-link icon="mail" :to="{path: '/', exact: true}">
-        	Link
+    	<q-drawer-link icon="font_download" to="letters">
+        	Letters
+    	</q-drawer-link>
+        <q-drawer-link icon="filter_1" to="numbers">
+        	Numbers
     	</q-drawer-link>
     </div>
 </q-drawer>

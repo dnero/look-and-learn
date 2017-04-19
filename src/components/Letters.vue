@@ -1,7 +1,7 @@
 <template>
   <div>
   	<div>
-	  Welcome to the Look &amp; Learn App
+	  Alphabet
 	</div>
   </div>
 </template>

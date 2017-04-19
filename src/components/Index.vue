@@ -5,7 +5,7 @@
 <div slot="header" class="toolbar">
 <!-- opens left-side drawer using its ref -->
 	<button class="hide-on-drawer-visible" @click="$refs.leftDrawer.open()">
-		<i>menu</i>
+		<i>menu</i><!-- makes a hamburger menu icon -->
 	</button>
 
 	<q-toolbar-title :padding="1">
@@ -15,15 +15,18 @@
 
 <!-- Navigation Tabs -->
 <q-tabs slot="navigation">
-    <q-tab icon="mail" route="/layout" exact replace>Letters</q-tab>
+    <q-tab icon="mail" route="/Alphabet" exact replace>Letters</q-tab>
     <q-tab icon="alarm" route="/layout/alarm" exact replace>Numbers</q-tab>
 </q-tabs>
+
+<!-- <div class="layout-view" slot="main"></div> -->
+<router-view></router-view>
 
 <!-- Left slide menu -->
 <q-drawer ref="leftDrawer">
 	<div class="toolbar">
     	<q-toolbar-title>
-        	Drawer Title
+            Menu
 		</q-toolbar-title>
 	</div>
     <div class="list no-border platform-delimiter">
@@ -31,45 +34,45 @@
         	Link
     	</q-drawer-link>
     </div>
-  </q-drawer>
-	
+</q-drawer>
+
 </q-layout>
 </template>
 
 <script>
 
 export default {
-  data () {
-	return {
-		appTitle: 'Look & Learn'
-	}
-  },
-  computed: {
-    position () {
-    //   let transform = `rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg)`
-    //   return {
-    //     top: this.moveY + 'px',
-    //     left: this.moveX + 'px',
-    //     '-webkit-transform': transform,
-    //     '-ms-transform': transform,
-    //     transform
-    //   }
-    }
-  },
-  methods: {
-    move (event) {
-    }
-  },
-  mounted () {
+	data () {
+		return {
+			appTitle: 'Look & Learn'
+		}
+	},
+	computed: {
+		position () {
+		//   let transform = `rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg)`
+		//   return {
+		//     top: this.moveY + 'px',
+		//     left: this.moveX + 'px',
+		//     '-webkit-transform': transform,
+		//     '-ms-transform': transform,
+		//     transform
+		//   }
+		}
+	},
+	methods: {
+    	move (event) {
+    	}
+	},
+	mounted () {
     // this.$nextTick(() => {
     //   document.addEventListener('mousemove', this.move)
     //   document.addEventListener('touchmove', this.move)
     // })
-  },
-  beforeDestroy () {
+	},
+	beforeDestroy () {
     // document.removeEventListener('mousemove', this.move)
     // document.removeEventListener('touchmove', this.move)
-  }
+	}
 }
 </script>
 

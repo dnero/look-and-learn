@@ -13,14 +13,14 @@
 	</q-toolbar-title>
 </div>
 
-<!-- Navigation Tabs -->
+<!-- Navigation Tabs
 <q-tabs slot="navigation">
-    <q-tab icon="font_download" route="/letters" exact replace>Letters</q-tab>
-    <q-tab icon="filter_1" route="/numbers" exact replace>Numbers</q-tab>
+    <q-tab icon="font_download" route="/letters" exact>Letters</q-tab>
+    <q-tab icon="filter_1" route="/numbers" exact>Numbers</q-tab>
 </q-tabs>
-
-<!-- <div class="layout-view" slot="main"></div> -->
-<router-view></router-view>
+ -->
+<!-- main view -->
+<router-view class="layout-view"></router-view>
 
 <!-- Left slide menu -->
 <q-drawer ref="leftDrawer">
@@ -79,5 +79,6 @@ export default {
 }
 </script>
 
-<style lang="styl">
+<style>
+
 </style>

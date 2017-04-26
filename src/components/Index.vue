@@ -13,12 +13,13 @@
 	</q-toolbar-title>
 </div>
 
-<!-- Navigation Tabs
+<!-- Navigation Tabs -->
 <q-tabs slot="navigation">
     <q-tab icon="font_download" route="/letters" exact>Letters</q-tab>
     <q-tab icon="filter_1" route="/numbers" exact>Numbers</q-tab>
 </q-tabs>
- -->
+
+
 <!-- main view -->
 <router-view class="layout-view"></router-view>
 

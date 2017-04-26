@@ -14,10 +14,11 @@ routes: [
         path: '/', component: load('Index'),
         children: [
             { path: '/letters', component: load('Letters') },
+            { path: '/letter/:letter', component: load('Letter') },
             { path: '/numbers', component: load('Numbers') }
         ]
     }, // Default
-    { path: '*', component: load('Error404') }, // Not found
+    { path: '*', component: load('Error404') } // Not found
 ]
 
 });

@@ -1,7 +1,9 @@
 <template>
 <div>
     <div class="letters" v-for="letter in alphabet">
-        <div>{{ letter }}</div>
+        <div>
+            <router-link :to="'letter/' + letter">{{ letter }}</router-link>
+        </div>
     </div>
 </div>
 </template>
@@ -26,7 +28,7 @@ export default {
     margin: 1.5%;
 }
 
-.letters div {
+.letters * {
     line-height: 100px;
     text-align: center;
     font-size: 40px;
